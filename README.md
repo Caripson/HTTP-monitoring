@@ -240,12 +240,14 @@ sudo apt-get update
 sudo apt-get -y install filebeat
 ```
 
-Update filebeat, press N
+Update filebeat, press N (fix 20170908)
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.5.2-amd64.deb
 sudo dpkg -i filebeat-5.5.2-amd64.deb
-#### Configuration FileBeat
 ```
+
+#### Configuration FileBeat
+
 
 ```
 chmod +x /tmp/HLS-monitoring/filebeat.sh
