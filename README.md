@@ -1,6 +1,6 @@
-# HTTP-monitoring 
+# HTTP-monitoring
 
-Complete solution for prob monitoring HTTP services with several prob agents. 
+Complete solution for prob monitoring HTTP services with several prob agents.
 The project includes realtime monitoring and SLA reporting with Kibana.
 
 ![Screenshot](img/banner.png)
@@ -30,7 +30,7 @@ The project includes realtime monitoring and SLA reporting with Kibana.
 - [ ] v0.4 monitor DASH
 - [ ] v.1 Raspberry pi prob
 
-#### Requriments 
+#### Requriments
 
 ##### Server
 Ubuntu 16.04 x64
@@ -63,21 +63,21 @@ git clone https://github.com/Caripson/HTTP-monitoring.git
 
 Download  jdk-8u144-linux-x64.tar.gz from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html to /tmp
 
-Upload the file to http://transfer.sh so that you can easly install it later on monitor probes 
+Upload the file to http://transfer.sh so that you can easly install it later on monitor probes
 ```
 cd /tmp
-curl --upload-file ./jdk-8u144-linux-x64.tar.gz  https://transfer.sh/jdk-8u144-linux-x64.tar.gz 
+curl --upload-file ./jdk-8u144-linux-x64.tar.gz  https://transfer.sh/jdk-8u144-linux-x64.tar.gz
 ```
-Start the installation 
+Start the installation
 ```
 chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 # Without downloading file
-/tmp/HLS-monitoring/install-jdk8.sh false 
+/tmp/HLS-monitoring/install-jdk8.sh false
 # Download file
-/tmp/HLS-monitoring/install-jdk8.sh true URL-to-JDK-file 
+/tmp/HLS-monitoring/install-jdk8.sh true URL-to-JDK-file
 ```
 
-### Install Elasticsearch 
+### Install Elasticsearch
 ```
 # add the Elastic APT repo
 echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
@@ -97,10 +97,10 @@ sudo apt-get -yq install elasticsearch
 #### Configuration Elasticsearch
 ```
 chmod +x /tmp/HTTP-monitoring/elasticsearch.sh
-/tmp/HTTP-monitoring/elasticsearch.sh 
+/tmp/HTTP-monitoring/elasticsearch.sh
 ```
 
-### Install Logstash 
+### Install Logstash
 
 Download and install the Public Signing Key:
 ```
@@ -132,7 +132,7 @@ sudo apt-get -yq install kibana
 #### Configuration Kibana
 ```
 chmod +x /tmp/HTTP-monitoring/kibana.sh
-/tmp/HTTP-monitoring/kibana.sh 
+/tmp/HTTP-monitoring/kibana.sh
 ```
 
 ### Install X-Pack
@@ -160,13 +160,13 @@ sudo apt-get install nginx apache2-utils
 #### Configuration Nginx
 ```
 chmod +x /tmp/HTTP-monitoring/nginx.sh
-/tmp/HTTP-monitoring/nginx.sh 
+/tmp/HTTP-monitoring/nginx.sh
 ```
 ### Start services
 ```
 sudo systemctl start elasticsearch
 sudo systemctl start kibana
-sudo systemctl start logstash 
+sudo systemctl start logstash
 ```
 ### Load Kibana Dashboards
 
@@ -211,7 +211,7 @@ Output:
 ### Troubleshooting
 
 
-## Setup monitor probe 
+## Setup monitor probe
 ### Install Java SDK
 
 Install git
@@ -239,7 +239,13 @@ Then install the Filebeat package:
 sudo apt-get update
 sudo apt-get -y install filebeat
 ```
+
+Update filebeat, press N
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.5.2-amd64.deb
+sudo dpkg -i filebeat-5.5.2-amd64.deb
 #### Configuration FileBeat
+```
 
 ```
 chmod +x /tmp/HLS-monitoring/filebeat.sh
@@ -261,6 +267,8 @@ Now restart Filebeat to put our changes into place:
 sudo service filebeat restart
 sudo update-rc.d filebeat defaults 95 10
 ```
+
+
 ### Setup and Config bash script
 
 ```
@@ -305,5 +313,3 @@ Become a contributor to this project!
 No sponsors yet! Will you be the first?<br>
 Become a contributor to this project!<br><br>
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=johan%2ecaripson%40gmail%2ecom&lc=SE&currency_code=SEK&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
-
-
