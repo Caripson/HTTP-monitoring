@@ -1,6 +1,6 @@
 # HTTP-monitoring
 
-Complete solution for prob monitoring HTTP services with several prob agents.
+Complete solution for prob monitoring HTTP services with several prob agents with a central reporting portal.
 The project includes realtime monitoring and SLA reporting with Kibana.
 
 ![Screenshot](img/banner.png)
