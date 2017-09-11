@@ -212,7 +212,6 @@ Output:
 
 
 ## Setup monitor probe
-### Install Java SDK
 
 Install git
 ```
@@ -223,6 +222,24 @@ Make tmp directory and clone HLS-monitoring
 sudo mkdir /tmp
 cd /tmp
 git clone https://github.com/Caripson/HTTP-monitoring.git
+```
+
+### Install Java SDK
+
+Download  jdk-8u144-linux-x64.tar.gz from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html to /tmp
+
+Upload the file to http://transfer.sh so that you can easly install it later on monitor probes
+```
+cd /tmp
+curl --upload-file ./jdk-8u144-linux-x64.tar.gz  https://transfer.sh/jdk-8u144-linux-x64.tar.gz
+```
+Start the installation
+```
+chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
+# Without downloading file
+/tmp/HLS-monitoring/install-jdk8.sh false
+# Download file
+/tmp/HLS-monitoring/install-jdk8.sh true URL-to-JDK-file
 ```
 
 ### Install FileBeat
