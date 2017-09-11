@@ -3,11 +3,14 @@
 remote=$1
 sudo mkdir -p /tmp
 sudo mkdir -p /usr/lib/jvm
-cd /tmp 
-if remote; then 
- filename=$2  	
+cd /tmp
+if remote; then
+ filename=$2
+ cd /tmp
  sudo curl -O filename
-fi 
+ sudo mkdir -p /usr/lib/jvm
+ sudo tar -x -C /usr/lib/jvm -f /tmp/jdk-8u144-linux-x64.tar.gz
+fi
 echo "name=jdk1.8.0_144" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
 echo "alias=oracle-jdk1.8" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
 echo "priority=180" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
@@ -111,5 +114,3 @@ sudo apt-get -yq install java-common
 sudo update-java-alternatives -s jdk1.8.0_144
 update-java-alternatives -l
 java -version
-
-

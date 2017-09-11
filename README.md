@@ -237,9 +237,9 @@ Start the installation
 ```
 chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 # Without downloading file
-/tmp/HLS-monitoring/install-jdk8.sh false
+/tmp/HTTP-monitoring/install-jdk8.sh false
 # Download file
-/tmp/HLS-monitoring/install-jdk8.sh true URL-to-JDK-file
+/tmp/HTT-monitoring/install-jdk8.sh true URL-to-JDK-file
 ```
 
 ### Install FileBeat
@@ -267,8 +267,8 @@ sudo dpkg -i filebeat-5.5.2-amd64.deb
 
 
 ```
-chmod +x /tmp/HLS-monitoring/filebeat.sh
-/tmp/HLS-monitoring/filebeat.sh
+chmod +x /tmp/HTTP-monitoring/filebeat.sh
+/tmp/HTTP-monitoring/filebeat.sh
 ```
 Edit filebeat.yml
 ```
@@ -296,7 +296,7 @@ chmod +x /tmp/HTTP-monitoring/watcher/runme.sh
 ```
 Update URL
 ```
-vi /tmp/HLS-monitoring/watcher/runme.sh
+vi /tmp/HTTP-monitoring/watcher/runme.sh
 edit sURL=http://www.google.com/
 ```
 
