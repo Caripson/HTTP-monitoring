@@ -164,11 +164,20 @@ sudo apt-get install nginx apache2-utils
 ```
 
 #### Configuration Nginx
+
+
+Use htpasswd to create an admin user, called "kibanaadmin" (you should use another name), that can access the Kibana web interface:
+```
+sudo htpasswd -c /etc/nginx/htpasswd.users kibanaadmin
+```
+
 Start the config of Nginx
 ```
 chmod +x /tmp/HTTP-monitoring/nginx.sh
 /tmp/HTTP-monitoring/nginx.sh
 ```
+
+
 ### Start services
 Start the service
 ```
