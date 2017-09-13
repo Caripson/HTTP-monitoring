@@ -52,7 +52,7 @@ bootstrap.memory_lock: true
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: 127.0.0.1
+network.host: localhost
 #
 # Set a custom port for HTTP:
 #
@@ -86,3 +86,9 @@ http.port: 9200
 # Require explicit names when deleting indices:
 #
 #action.destructive_requires_name: true
+xpack.security.enabled: false
+xpack.ssl.key:                     /etc/elasticsearch/certs/node-1/node-1.key
+xpack.ssl.certificate:             /etc/elasticsearch/certs/node-1/node-1.crt
+xpack.ssl.certificate_authorities: [ "/etc/elasticsearch/certs/ca/ca.crt" ]
+xpack.security.transport.ssl.enabled: false
+xpack.security.http.ssl.enabled: false

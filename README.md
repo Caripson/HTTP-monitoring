@@ -94,12 +94,6 @@ sudo apt-get -yq install elasticsearch
 
 ```
 
-#### Configuration Elasticsearch
-```
-chmod +x /tmp/HTTP-monitoring/elasticsearch.sh
-/tmp/HTTP-monitoring/elasticsearch.sh
-```
-
 ### Install Logstash
 
 Download and install the Public Signing Key:
@@ -118,24 +112,18 @@ Run sudo apt-get update and the repository is ready for use. You can install it 
 ```
 sudo apt-get update && sudo apt-get install logstash
 ```
-#### Configuration Logstash
-```
-chmod +x /tmp/HTTP-monitoring/logstash.sh
-/tmp/HTTP-monitoring/logstash.sh
-```
+
 
 ### Install Kibana
+Start the install of Kibana
 ```
 sudo apt-get -yq install kibana
 
 ```
-#### Configuration Kibana
-```
-chmod +x /tmp/HTTP-monitoring/kibana.sh
-/tmp/HTTP-monitoring/kibana.sh
-```
 
 ### Install X-Pack
+Start the install of X-Pack
+
 ```
 # install x-pack for elasticsearch  (reply 'y' to permissions question)
 cd /usr/share/elasticsearch
@@ -151,6 +139,24 @@ sudo bin/logstash-plugin install x-pack
 
 ```
 
+#### Configuration Logstash, Kibana, Elasticsearch
+
+Start config of logstash
+```
+chmod +x /tmp/HTTP-monitoring/logstash.sh
+/tmp/HTTP-monitoring/logstash.sh
+```
+Start config if kibana
+```
+chmod +x /tmp/HTTP-monitoring/kibana.sh
+/tmp/HTTP-monitoring/kibana.sh
+```
+Start config elasticsearch
+```
+chmod +x /tmp/HTTP-monitoring/elasticsearch.sh
+/tmp/HTTP-monitoring/elasticsearch.sh
+```
+
 ### Install Nginx
 Use apt to install Nginx and Apache2-utils
 ```
@@ -158,15 +164,18 @@ sudo apt-get install nginx apache2-utils
 ```
 
 #### Configuration Nginx
+Start the config of Nginx
 ```
 chmod +x /tmp/HTTP-monitoring/nginx.sh
 /tmp/HTTP-monitoring/nginx.sh
 ```
 ### Start services
+Start the service
 ```
 sudo systemctl start elasticsearch
 sudo systemctl start kibana
 sudo systemctl start logstash
+sudo systemctl start nginx
 ```
 ### Load Kibana Dashboards
 
