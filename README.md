@@ -350,3 +350,6 @@ Become a contributor to this project!
 No sponsors yet! Will you be the first?<br>
 Become a contributor to this project!<br><br>
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=johan%2ecaripson%40gmail%2ecom&lc=SE&currency_code=SEK&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
+##### 
+[![Analytics](https://ga-beacon.appspot.com/UA-106804965-1/chromeskel_a/readme)](https://caripson.github.io/HTTP-monitoring/)
