@@ -72,7 +72,7 @@ Start the installation
 ```
 chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 # Without downloading file
-/tmp/HTTP-monitoring/install-jdk8.sh 
+/tmp/HTTP-monitoring/install-jdk8.sh
 ```
 
 ### Install Elasticsearch
@@ -253,9 +253,7 @@ Start the installation
 ```
 chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 # Without downloading file
-/tmp/HTTP-monitoring/install-jdk8.sh false
-# Download file
-/tmp/HTT-monitoring/install-jdk8.sh true URL-to-JDK-file
+/tmp/HTTP-monitoring/install-jdk8.sh
 ```
 
 ### Install FileBeat
