@@ -4,7 +4,7 @@ sudo mkdir -p /tmp
  cd /tmp
  sudo mkdir -p /usr/lib/jvm
  sudo tar -x -C /usr/lib/jvm -f /tmp/jdk-8u144-linux-x64.tar.gz
-fi
+
 echo "name=jdk1.8.0_144" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
 echo "alias=oracle-jdk1.8" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
 echo "priority=180" >> /usr/lib/jvm/.jdk1.8.0_144.jinfo
