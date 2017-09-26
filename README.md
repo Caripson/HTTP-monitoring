@@ -72,9 +72,7 @@ Start the installation
 ```
 chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 # Without downloading file
-/tmp/HLS-monitoring/install-jdk8.sh false
-# Download file
-/tmp/HLS-monitoring/install-jdk8.sh true URL-to-JDK-file
+/tmp/HTTP-monitoring/install-jdk8.sh 
 ```
 
 ### Install Elasticsearch
@@ -235,7 +233,7 @@ Install git
 ```
 sudo apt-get -y install git
 ```
-Make tmp directory and clone HLS-monitoring
+Make tmp directory and clone HTTP-monitoring
 ```
 sudo mkdir /tmp
 cd /tmp
