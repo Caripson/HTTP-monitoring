@@ -61,12 +61,12 @@ git clone https://github.com/Caripson/HTTP-monitoring.git
 
 ### Install Java SDK
 
-Download  jdk-8u144-linux-x64.tar.gz from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html to /tmp
+Download  jdk-8u151-linux-x64.tar from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html to /tmp
 
 Upload the file to http://transfer.sh so that you can easly install it later on monitor probes
 ```
 cd /tmp
-curl --upload-file ./jdk-8u144-linux-x64.tar.gz  https://transfer.sh/jdk-8u144-linux-x64.tar.gz
+curl --upload-file ./jdk-8u151-linux-x64.tar  https://transfer.sh/jdk-8u151-linux-x64.tar
 ```
 Start the installation
 ```
