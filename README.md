@@ -53,6 +53,7 @@ sudo apt-get -y install git
 ```
 Make tmp directory and clone HTTP-monitoring
 ```
+cd /
 sudo mkdir /tmp
 cd /tmp
 git clone https://github.com/Caripson/HTTP-monitoring.git
@@ -65,6 +66,7 @@ Download  jdk-8u151-linux-x64.tar from http://www.oracle.com/technetwork/java/ja
 
 Upload the file to http://transfer.sh so that you can easly install it later on monitor probes
 ```
+cd /
 cd /tmp
 curl --upload-file ./jdk-8u151-linux-x64.tar  https://transfer.sh/jdk-8u151-linux-x64.tar
 ```
