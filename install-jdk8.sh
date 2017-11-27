@@ -3,7 +3,7 @@
 sudo mkdir -p /tmp
  cd /tmp
  sudo mkdir -p /usr/lib/jvm
- sudo tar -x -C /usr/lib/jvm -f /tmp/jdk-8u151-linux-x64.tar
+ sudo tar -x -C /usr/lib/jvm -f /tmp/jdk-8u151-linux-x64.tar.gz
 
 echo "name=jdk1.8.0_151" >> /usr/lib/jvm/.jdk1.8.0_151.jinfo
 echo "alias=oracle-jdk1.8" >> /usr/lib/jvm/.jdk1.8.0_151.jinfo
