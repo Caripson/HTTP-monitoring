@@ -3,7 +3,7 @@
 Complete solution for prob monitoring HTTP services with several prob agents with a central reporting portal.
 The project includes realtime monitoring and SLA reporting with Kibana.
 
-![Screenshot](img/bannerv1.png )
+![Screenshot](img/banner.png )
 
 
 ### Monitor parameters
