@@ -77,13 +77,15 @@ chmod +x /tmp/HTTP-monitoring/install-jdk8.sh
 /tmp/HTTP-monitoring/install-jdk8.sh
 ```
 
-### Install Elasticsearch
+### Install Elasticsearch 6
 ```
 # add the Elastic APT repo
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+
 
 # trust the signing key
-sudo apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv D88E42B4
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
 
 # update repo information
 sudo apt-get -yq install apt-transport-https
@@ -94,19 +96,22 @@ sudo apt-get -yq install elasticsearch
 
 ```
 
-### Install Logstash
+### Install Logstash 6
 
 Download and install the Public Signing Key:
 ```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
 ```
 You may need to install the apt-transport-https package on Debian before proceeding:
 ```
 sudo apt-get install apt-transport-https
+sudo apt-get -yq update
 ```
-Save the repository definition to /etc/apt/sources.list.d/elastic-5.x.list:
+Save the repository definition to /etc/apt/sources.list.d/elastic-6.x.list:
 ```
-echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+
 ```
 Run sudo apt-get update and the repository is ready for use. You can install it with:
 ```
@@ -115,9 +120,13 @@ sudo apt-get update && sudo apt-get install logstash
 
 
 ### Install Kibana
-Start the install of Kibana
+Start the install of Kibana 6
 ```
-sudo apt-get -yq install kibana
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt-get update && sudo apt-get install kibana
+
 
 ```
 
